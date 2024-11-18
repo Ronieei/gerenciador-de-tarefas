@@ -1,0 +1,16 @@
+ @GetMapping("/deletartarefa")
+    public RedirectView deletarTarefa(@RequestParam(name = "id", required = false) Integer id,
+                                      RedirectAttributes attributes) {
+        if (id != null) {
+            try (Connection con = FabricaConexao.pegaConexao()) {
+                TarefaDaoInterface tarefaDao = new TarefaDao(con);
+                tarefaDao.remover(id);
+                return new RedirectView("/tarefa?mensagem=Deletado com sucesso.");
+            } catch (ErroDao | SQLException e) {
+                return new RedirectView("/tarefa?mensagem=Erro ao deletar tarefa: " + e.getMessage());
+            }
+        } else {
+            return new RedirectView("/tarefa?mensagem=Informe o Id.");
+        }
+    }
+tipo RedirectView

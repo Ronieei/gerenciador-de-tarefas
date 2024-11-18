@@ -1,0 +1,49 @@
+A anotação @Bean no Spring é utilizada para definir um método que instanciará, configurará e retornará um objeto gerenciado pelo contêiner do Spring. Esses objetos são conhecidos como Beans.
+
+Principais Funções e Usos do @Bean:
+Configuração de Beans:
+
+Quando você marca um método com @Bean, o Spring executa esse método e registra o objeto retornado como um Bean na configuração do contexto da aplicação.
+Este Bean pode então ser injetado em outros componentes do Spring, como controllers, services, e repositories.
+Personalização de Beans:
+
+O @Bean permite criar e configurar instâncias de classes que não estão diretamente anotadas com @Component, @Service, @Repository, ou @Controller.
+Isso é útil quando você precisa de configurações personalizadas ou precisa criar instâncias de classes de terceiros (que não estão anotadas com as anotações Spring).
+Controlar o Ciclo de Vida:
+
+Você pode controlar o ciclo de vida dos Beans usando métodos como initMethod e destroyMethod para executar código específico quando o Bean é inicializado ou destruído.
+Exemplo de Uso do @Bean:
+Aqui está um exemplo simples onde um ViewResolver é configurado usando o @Bean:
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/WEB-INF/views/");
+        resolver.setSuffix(".jsp");
+        return resolver;
+    }
+}
+
+Como Funciona:
+Declaração: @Bean é declarado em um método dentro de uma classe anotada com @Configuration ou outro contexto de configuração do Spring.
+
+Retorno: O método viewResolver() retorna uma instância do ViewResolver que o Spring gerenciará.
+
+Registro: O Spring registra esse Bean no contexto da aplicação, tornando-o disponível para injeção em outros componentes.
+
+Benefícios do Uso do @Bean:
+Flexibilidade: Permite configuração explícita e detalhada de como os objetos devem ser criados e configurados.
+Integração: Facilita a integração com bibliotecas externas ou componentes que precisam de configuração personalizada.
+Testabilidade: Você pode criar diferentes configurações para diferentes ambientes (por exemplo, produção vs. testes) usando o @Bean.
+Diferença entre @Bean e Outras Anotações (como @Component):
+@Component, @Service, @Repository, e @Controller são usadas para classes que devem ser autodetectadas e registradas como Beans automaticamente pelo Spring.
+@Bean é usado para métodos em classes de configuração (@Configuration) que explicitamente instanciam e configuram Beans, oferecendo maior controle sobre o processo de criação e configuração.

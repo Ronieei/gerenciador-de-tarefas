@@ -1,0 +1,524 @@
+/* CABEÇALHO JSP */
+.error-message {
+    color: #d9534f; /* Vermelho para mensagens de erro */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destacar a mensagem */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+.success-message {
+    color: #5bc0de; /* Azul claro para mensagens de sucesso */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destacar a mensagem */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+
+/* RODAPE JSP */
+footer {
+    background-color: #f1f1f1; /* Cor de fundo do rodapé */
+    color: #333; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 3px; /* Preenchimento interno do rodapé */
+    margin-top: 90%; /* Margem superior para separar o rodapé do conteúdo acima */
+    border-top: 2px solid #ddd; /* Borda superior do rodapé */
+    position: fixed; /* Permite que o rodapé fique fixado no fundo, se necessário */
+    width: 99%; /* Garante que o rodapé ocupe toda a largura da página */
+    bottom: 1px; /* Garante que o rodapé fique na parte inferior da página se o conteúdo for curto */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidade */
+}
+
+/* LOGIN JSP */
+
+.formulario-login {
+    max-width: 300px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 20px; /* Espaço interno ao redor do conteúdo do formulário */
+    border: 1px solid #ddd; /* Borda ao redor do formulário */
+    border-radius: 10px; /* Bordas arredondadas do formulário */
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do formulário */
+}
+
+.label-usuario, .label-senha {
+    display: block; /* Faz com que o label ocupe uma linha inteira */
+    margin-bottom: 5px; /* Espaço abaixo do label */
+    font-weight: bold; /* Estilo para o texto do label */
+}
+
+.input-usuario, .input-senha {
+    width: 100%; /* Faz com que o campo de entrada ocupe toda a largura disponível */
+    padding: 8px; /* Adiciona preenchimento interno */
+    margin-bottom: 10px; /* Espaço abaixo do campo de entrada */
+    border: 1px solid #ccc; /* Borda do campo de entrada */
+    border-radius: 4px; /* Borda arredondada */
+}
+
+.botao-entrar {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Preenchimento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Borda arredondada do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+}
+
+.titulo-formulario {
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito para destacar o título */
+    color: #333; /* Cor do texto do título */
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.botao-entrar:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.link-cadastrar-form-login {
+    display: inline-block; /* Faz com que o link seja exibido em linha */
+    margin-left: 35px; /* Espaço à esquerda do link */
+    font-size: 19px; /* Tamanho da fonte do link */
+    color: #007bff; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.link-cadastrar-form-login:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+}
+
+/* INDEX JSP */
+
+/* Estiliza o contêiner dos links de navegação */
+#nav-links {
+    display: flex; /* Usa flexbox para alinhar os links horizontalmente */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 20px; /* Espaçamento entre os links */
+    margin: 20px 0; /* Espaço acima e abaixo do contêiner */
+    padding: 10px 20px; /* Espaço interno ao redor dos links */
+    background-color: #f8f9fa; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Bordas arredondadas do contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do contêiner */
+}
+
+/* Estiliza os links de navegação */
+.nav-link {
+    color: #007bff; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    padding: 12px 20px; /* Espaço interno ao redor do texto do link */
+    border-radius: 6px; /* Bordas arredondadas para o link */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transição suave para mudanças de cor e transformação */
+}
+
+/* Estiliza o link quando o mouse passa sobre ele */
+.nav-link:hover {
+    background-color: #007bff; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do link */
+}
+
+/* Estiliza o link quando é clicado */
+.nav-link:active {
+    background-color: #0056b3; /* Cor de fundo quando o link é clicado */
+    color: #ffffff; /* Cor do texto quando o link é clicado */
+    transform: scale(0.95); /* Diminui ligeiramente o tamanho do link quando clicado */
+}
+
+/* CADASTRAR JSP */
+
+/* Estiliza o formulário de cadastro */
+.formulario-cadastro {
+    max-width: 450px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 20px; /* Espaço interno ao redor do conteúdo do formulário */
+    border: 1px solid #ddd; /* Borda ao redor do formulário */
+    border-radius: 10px; /* Bordas arredondadas do formulário */
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do formulário */
+}
+
+/* Estiliza o campo do formulário */
+.formulario-cadastro label {
+    display: block; /* Faz com que o label ocupe uma linha inteira */
+    margin-bottom: 8px; /* Espaço abaixo do label */
+    font-weight: bold; /* Estilo para o texto do label */
+}
+
+.formulario-cadastro input[type="text"],
+.formulario-cadastro input[type="email"],
+.formulario-cadastro input[type="password"] {
+    width: 90%; /* Faz com que o campo de entrada ocupe toda a largura disponível */
+    padding: 10px; /* Adiciona preenchimento interno */
+    margin-bottom: 15px; /* Espaço abaixo do campo de entrada */
+    border: 1px solid #ccc; /* Borda do campo de entrada */
+    border-radius: 4px; /* Borda arredondada */
+}
+
+/* Estiliza o botão de submit */
+.botao-submit {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 12px 20px; /* Preenchimento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Borda arredondada do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    display: block; /* Faz com que o botão ocupe toda a largura disponível */
+    width: 100%; /* Largura total do botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estiliza o botão ao passar o mouse */
+.botao-submit:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estiliza o link de retorno ao login */
+.link-login {
+    display: block; /* Faz com que o link ocupe toda a largura disponível */
+    text-align: center; /* Centraliza o texto do link */
+    margin-top: 20px; /* Espaço acima do link */
+    font-size: 16px; /* Tamanho da fonte do link */
+    color: #007bff; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estiliza o link ao passar o mouse */
+.link-login:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* EDITAR JSP */
+
+/* Estilo para o título da página */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo para o formulário de tarefas */
+.task-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os campos de entrada do formulário */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Estilo para a área de texto */
+.form-textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Estilo para o botão de submit */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+/* Estilo para o botão de submit ao passar o mouse */
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o link de retorno */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Estilo para o link de retorno ao passar o mouse */
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* TAREFA JSP */
+
+/* Estilo para o título da página */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo para o formulário de adicionar tarefa */
+.task-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para fieldset */
+.form-fieldset {
+    border: 2px solid #28a745; /* Borda verde para destacar o fieldset */
+    border-radius: 8px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno para dar mais espaço */
+    margin: 20px 0; /* Margem superior e inferior para separar dos outros elementos */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para adicionar profundidade */
+}
+
+/* Estilo para legend */
+.legenda-tarefa {
+    font-size: 18px; /* Tamanho da fonte para o título */
+    font-weight: bold; /* Negrito para destacar o texto */
+    color: #28a745; /* Cor verde para combinar com a borda */
+    border-bottom: 2px solid #28a745; /* Linha abaixo da legenda para separação */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
+    margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-input,
+.form-text{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; /* Ajuste conforme necessário */
+}
+
+/* Estilo específico para textarea */
+.form-text {
+    height: 200px; /* Ajuste a altura conforme necessário */
+    resize: vertical; /* Permite que o usuário ajuste a altura do textarea */
+    overflow: auto; /* Adiciona uma barra de rolagem se o texto ultrapassar o tamanho */
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para os itens de tarefa */
+.task-completed {
+    border-left: 5px solid #28a745;
+    background-color: #eafaf1;
+}
+
+.task-pending {
+    border-left: 5px solid #dc3545;
+    background-color: #f9e9e9;
+}
+
+.task-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.task-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Estilo para o formulário de status da tarefa */
+.status-form {
+    display: inline;
+}
+
+.status-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.status-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para os links de deletar e editar */
+.delete-link,
+.edit-link ,
+.voltar-link{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.delete-link:hover,
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para as linhas divisórias */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Estilo para o link Home */
+.home-inicio {
+    display: inline-block; /* Garante que o link se comporte como um bloco de nível inline */
+    margin-left: 2px; /* Remove qualquer margem esquerda, se houver */
+    margin-right: auto; /* Garante que o link fique à esquerda */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: #007bff; /* Define a cor do texto do link */
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+}
+
+/* Adiciona um pouco de estilo ao link, se necessário */
+.home-inicio:hover {
+    color: #0056b3; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+}
+
+/* RELATORIO DE USUARIOS */
+
+/* Título do relatório */
+.titulo-relatorio {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulário de pesquisa */
+.formulario-pesquisa {
+    margin-bottom: 20px;
+}
+
+.label-pesquisa {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.campo-pesquisa {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.botao-pesquisa {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botao-pesquisa:hover {
+    background-color: #218838;
+}
+
+/* Estilo da tabela */
+.tabela-relatorio {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-relatorio th, .tabela-relatorio td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.tabela-relatorio th {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.tabela-relatorio td {
+    background-color: #fff;
+}
+
+/* Botão de resumo */
+.formulario-resumo {
+    display: inline-block;
+}
+
+.botao-resumo {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botao-resumo:hover {
+    background-color: #0056b3;
+}
+
+
+.botao-resumo {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botao-resumo:hover {
+    background-color: #0056b3;
+}
+
